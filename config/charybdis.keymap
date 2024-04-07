@@ -19,7 +19,7 @@
 };
 
 / {
-    chosen { zmk,matrix_transform = &five_column_transform; };
+    chosen { zmk,matrix_transform = &default_transform; };
 };
 
 / {
@@ -28,52 +28,52 @@
 
         LeftClickRight {
             bindings = <&mkp LCLK>;
-            key-positions = <16 17>;
+            key-positions = <19 20>;
         };
 
         RightClickRight {
             bindings = <&mkp RCLK>;
-            key-positions = <17 18>;
+            key-positions = <20 21>;
         };
 
         ParaLeft {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <3 13>;
+            key-positions = <4 16>;
         };
 
         ParaRight {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <6 16>;
+            key-positions = <7 19>;
         };
 
         BrakLeft {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <2 12>;
+            key-positions = <3 15>;
         };
 
         BrakRight {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <7 17>;
+            key-positions = <8 20>;
         };
 
         BraceLeft {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <1 11>;
+            key-positions = <2 14>;
         };
 
         BraceRight {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <8 18>;
+            key-positions = <9 21>;
         };
 
         Delete {
             bindings = <&kp DELETE>;
-            key-positions = <7 8>;
+            key-positions = <8 9>;
         };
 
         CapsWord {
             bindings = <&caps_word>;
-            key-positions = <14 15>;
+            key-positions = <17 18>;
         };
     };
 
@@ -84,7 +84,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            hold-trigger-key-positions = <34>;
+            hold-trigger-key-positions = <40>;
             tapping-term-ms = <100>;
         };
     };
@@ -92,48 +92,48 @@
     keymap {
         compatible = "zmk,keymap";
 
-        COLEMAK {
+        BASE {
             bindings = <
-  &kp Q             &kp W               &kp F           &kp P           &kp B        &kp J            &kp L                           &kp U      &kp Y    &kp APOS
-  &mt LEFT_SHIFT A  &mt LEFT_CONTROL R  &mt LEFT_ALT S  &mt LEFT_GUI T  &kp G        &kp M            &kp N                           &kp E      &kp I    &kp O
-  &kp Z             &kp X               &kp C           &kp D           &kp V        &kp K            &kp H                           &kp COMMA  &kp DOT  &kp SLASH
-                                        &mo 4           &kp SPACE       &lt 1 TAB    &lt 2 BACKSPACE  &Shift_Enter RIGHT_SHIFT ENTER
+  &kp ESC     &kp Q   &kp W   &kp E   &kp R        &kp T        &kp Y   &kp U    &kp I       &kp O     &kp P      &kp BSPC
+  &kp LCTRL   &kp A   &kp S   &kp D   &mt LALT F   &kp G        &kp H   &kp J    &kp K       &kp L     &kp SEMI   &kp APOS
+  &kp LSHFT   &kp Z   &kp X   &kp C   &kp V        &kp B        &kp N   &kp M    &kp COMMA   &kp DOT   &kp FSLH   &kp LGUI
+                      &mo 4   &kp SPACE   &lt 1 TAB             &mo 2   &Shift_Enter RIGHT_SHIFT ENTER
             >;
         };
 
         NAV {
             bindings = <
-  &kp LA(F4)  &kp LG(UP_ARROW)  &kp LG(LEFT)     &kp LG(RIGHT)        &kp LC(W)    &kp PRINTSCREEN  &kp BACKSPACE     &kp ENTER          &kp DELETE    &trans
-  &kp LC(Z)   &kp RC(RS(T))     &kp LS(LC(TAB))  &kp LC(TAB)          &kp LC(A)    &kp ENTER        &kp LEFT          &kp DOWN           &kp UP_ARROW  &kp RIGHT
-  &kp LC(Z)   &kp LC(X)         &kp LC(C)        &mt LC(LS(V)) LC(V)  &kp LC(Y)    &trans           &kp LC(LS(LEFT))  &kp LS(LC(RIGHT))  &trans        &trans
-                                &trans           &trans               &trans       &lt 3 BACKSPACE  &kp LSHFT
+  &trans   &trans     &kp UP       &trans     &trans   &trans       &kp N7   &kp N8  &kp N9   &kp N0   &kp HOME   &kp F1
+  &trans   &kp LEFT   &kp DOWN     &kp RIGHT  &trans   &trans       &kp N4   &kp N5  &kp N6   &trans   &trans     &kp F10
+  &trans   &trans     &trans       &trans     &trans   &trans       &kp N1   &kp N2  &kp N3   &trans   &trans     &kp F20
+                      &trans       &trans     &trans                &lt 3 BACKSPACE  &kp LSHFT
             >;
         };
 
         SYMNUM {
             bindings = <
-  &kp GRAVE  &kp EXCL   &kp AT       &kp POUND       &kp DOLLAR    &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp SEMI
-  &kp TILDE  &kp STAR   &kp PIPE     &kp UNDER       &kp MINUS     &kp N0     &kp N4  &kp N5  &kp N6  &kp COLON
-  &trans     &kp CARET  &kp PERCENT  &kp AMPERSAND   &trans        &trans     &kp N7  &kp N8  &kp N9  &trans
-                        &trans       &kp LEFT_SHIFT  &lt 3 TAB     &trans     &trans
+  &trans   &kp EXCL       &kp AT        &kp HASH     &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp KP_MULTIPLY   &kp LPAR   &kp RPAR   &kp DEL
+  &trans   &bt BT_CLR     &bt BT_PRV    &bt BT_NXT   &trans      &trans          &kp UNDER   &kp EQUAL   &kp LBKT          &kp RBKT   &kp BSLH   &kp GRAVE
+  &trans   &out OUT_TOG   &bootloader   &trans       &trans      &trans          &kp MINUS   &kp PLUS    &kp LBRC          &kp RBRC   &kp PIPE   &kp TILDE
+                          &trans        &trans       &lt 3 TAB                   &trans      &trans
             >;
         };
 
         FUN {
             bindings = <
-  &kp ESC  &kp F1  &kp F2  &kp F3  &kp F10    &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4
-  &kp F12  &kp F4  &kp F5  &kp F6  &kp F11    &out OUT_TOG  &kp K_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &bt BT_CLR
-  &trans   &kp F7  &kp F8  &kp F9  &kp F12    &trans        &trans            &trans             &trans           &trans
-                   &trans  &trans  &trans     &trans        &trans
+  &trans   &trans    &kp F1  &kp F2   &kp F3   &kp F4       &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4   &bt BT_CLR
+  &trans   &kp DEL   &kp F5  &kp F6   &kp F7   &kp F8       &out OUT_TOG  &kp K_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE     &kp LALT
+  &trans   &trans    &kp F9  &kp F10  &kp F11  &kp F12      &trans        &trans            &trans             &trans           &trans         &to 0
+                     &trans  &trans  &trans                 &trans        &trans
             >;
         };
 
         SCROLL {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans    &trans  &trans
+  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans            &trans  &trans
             >;
         };
     };
