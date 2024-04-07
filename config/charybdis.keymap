@@ -87,6 +87,16 @@
             hold-trigger-key-positions = <34>;
             tapping-term-ms = <100>;
         };
+
+        F_Alt: F_Alt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "F_ALT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <16>;
+            tapping-term-ms = <100>;
+        };
     };
 
     keymap {
@@ -94,10 +104,10 @@
 
         BASE {
             bindings = <
-  &kp ESC     &kp Q   &kp W   &kp E   &kp R        &kp T        &kp Y    &kp U    &kp I       &kp O     &kp P      &kp BSPC
-  &kp LCTRL   &kp A   &kp S   &kp D   &lt LALT F   &kp G        &kp H    &kp J    &kp K       &kp L     &kp SEMI   &kp APOS
-  &kp LSHFT   &kp Z   &kp X   &kp C   &kp V        &kp B        &kp N    &kp M    &kp COMMA   &kp DOT   &kp FSLH   &kp LGUI
-                      &mo 4   &kp SPACE   &lt 1 TAB             &mo 2    &Shift_Enter RIGHT_SHIFT ENTER
+  &kp ESC     &kp Q   &kp W   &kp E   &kp R           &kp T        &kp Y   &kp U    &kp I       &kp O     &kp P      &kp BSPC
+  &kp LCTRL   &kp A   &kp S   &kp D   &F_Alt LALT F   &kp G        &kp H   &kp J    &kp K       &kp L     &kp SEMI   &kp APOS
+  &kp LSHFT   &kp Z   &kp X   &kp C   &kp V           &kp B        &kp N   &kp M    &kp COMMA   &kp DOT   &kp FSLH   &kp LGUI
+                      &mo 4   &kp SPACE   &lt 1 TAB                &mo 2   &Shift_Enter RIGHT_SHIFT ENTER
             >;
         };
 
