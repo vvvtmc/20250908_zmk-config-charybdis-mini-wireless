@@ -93,10 +93,10 @@
 
         BASE {
             bindings = <
-  &kp ESC     &kp Q   &kp W   &kp E   &kp R   &kp T                 &kp Y    &kp U    &kp I       &kp O     &kp P      &kp BSPC
-  &kp LCTRL   &kp A   &kp S   &kp D   &kp F   &kp G                 &kp H    &kp J    &kp K       &kp L     &kp SEMI   &kp APOS
-  &kp LSHFT   &kp Z   &kp X   &kp C   &kp V   &kp B                 &kp N    &kp M    &kp COMMA   &kp DOT   &kp FSLH   &kp LGUI
-                      &mo 4   &kp SPACE   &lt 1 TAB                 &mo 2    &Shift_Enter RIGHT_SHIFT ENTER
+  &kp ESC     &kp Q   &kp W   &kp E   &kp R        &kp T        &kp Y    &kp U    &kp I       &kp O     &kp P      &kp BSPC
+  &kp LCTRL   &kp A   &kp S   &kp D   &lt LALT F   &kp G        &kp H    &kp J    &kp K       &kp L     &kp SEMI   &kp APOS
+  &kp LSHFT   &kp Z   &kp X   &kp C   &kp V        &kp B        &kp N    &kp M    &kp COMMA   &kp DOT   &kp FSLH   &kp LGUI
+                      &mo 4   &kp SPACE   &lt 1 TAB             &mo 2    &Shift_Enter RIGHT_SHIFT ENTER
             >;
         };
 
@@ -120,10 +120,10 @@
 
         FUN {
             bindings = <
-  &trans   &trans   &kp F1  &kp F2   &kp F3   &kp F4       &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4   &bt BT_CLR
-  &trans   &trans   &kp F5  &kp F6   &kp F7   &kp F8       &out OUT_TOG  &kp K_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE     &trans
-  &trans   &trans   &kp F9  &kp F10  &kp F11  &kp F12      &trans        &trans            &trans             &trans           &trans         &to 0
-                    &trans  &trans  &trans                 &trans        &trans
+  &trans   &trans    &kp F1  &kp F2   &kp F3   &kp F4       &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4   &bt BT_CLR
+  &trans   &kp DEL   &kp F5  &kp F6   &kp F7   &kp F8       &out OUT_TOG  &kp K_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE     &kp LALT
+  &trans   &trans    &kp F9  &kp F10  &kp F11  &kp F12      &trans        &trans            &trans             &trans           &trans         &to 0
+                     &trans  &trans  &trans                 &trans        &trans
             >;
         };
 
