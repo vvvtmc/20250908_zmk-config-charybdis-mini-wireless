@@ -1,8 +1,8 @@
-#include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 &lt {
@@ -94,46 +94,46 @@
 
         BASE {
             bindings = <
-  &kp ESC     &kp Q   &kp W   &kp E   &kp R        &kp T        &kp Y   &kp U    &kp I       &kp O     &kp P      &kp BSPC
-  &kp LCTRL   &kp A   &kp S   &kp D   &mt LALT F   &kp G        &kp H   &kp J    &kp K       &kp L     &kp SEMI   &kp APOS
-  &kp LSHFT   &kp Z   &kp X   &kp C   &kp V        &kp B        &kp N   &kp M    &kp COMMA   &kp DOT   &kp FSLH   &kp LGUI
-                      &mo 4   &kp SPACE   &lt 1 TAB             &mo 2   &Shift_Enter RIGHT_SHIFT ENTER
+&kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T        &kp Y  &kp U                           &kp I        &kp O            &kp P               &kp BSPC
+&kp LCTRL  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G        &kp H  &mt LEFT_SHIFT J                &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
+&kp LSHFT  &kp Z           &kp X           &kp C        &kp V             &kp B        &kp N  &kp M                           &kp COMMA    &kp DOT          &kp FSLH            &kp LGUI
+                                           &mo 4        &kp SPACE         &lt 1 TAB    &mo 2  &Shift_Enter RIGHT_SHIFT ENTER
             >;
         };
 
         NAV {
             bindings = <
-  &trans   &trans     &kp UP       &trans     &trans   &trans       &kp N7   &kp N8  &kp N9   &kp N0   &kp HOME   &kp F1
-  &trans   &kp LEFT   &kp DOWN     &kp RIGHT  &trans   &trans       &kp N4   &kp N5  &kp N6   &trans   &trans     &kp F10
-  &trans   &trans     &trans       &trans     &trans   &trans       &kp N1   &kp N2  &kp N3   &trans   &trans     &kp F20
-                      &trans       &trans     &trans                &lt 3 BACKSPACE  &kp LSHFT
+&trans  &trans    &kp UP    &trans     &trans  &trans    &kp N7           &kp N8     &kp N9  &kp N0  &kp HOME  &kp F1
+&trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans    &kp N4           &kp N5     &kp N6  &trans  &trans    &kp F10
+&trans  &trans    &trans    &trans     &trans  &trans    &kp N1           &kp N2     &kp N3  &trans  &trans    &kp F20
+                            &trans     &trans  &trans    &lt 3 BACKSPACE  &kp LSHFT
             >;
         };
 
         SYMNUM {
             bindings = <
-  &trans   &kp EXCL       &kp AT        &kp HASH     &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp KP_MULTIPLY   &kp LPAR   &kp RPAR   &kp DEL
-  &trans   &bt BT_CLR     &bt BT_PRV    &bt BT_NXT   &trans      &trans          &kp UNDER   &kp EQUAL   &kp LBKT          &kp RBKT   &kp BSLH   &kp GRAVE
-  &trans   &out OUT_TOG   &bootloader   &trans       &trans      &trans          &kp MINUS   &kp PLUS    &kp LBRC          &kp RBRC   &kp PIPE   &kp TILDE
-                          &trans        &trans       &lt 3 TAB                   &trans      &trans
+&trans  &kp EXCL      &kp AT       &kp HASH    &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS               &kp KP_MULTIPLY  &kp LPAR            &kp RPAR            &kp DEL
+&trans  &bt BT_CLR    &bt BT_PRV   &bt BT_NXT  &trans    &trans       &kp UNDER  &mt RIGHT_SHIFT EQUAL  &mt RCTRL LBKT   &mt RIGHT_ALT RBKT  &mt RIGHT_GUI BSLH  &kp GRAVE
+&trans  &out OUT_TOG  &bootloader  &trans      &trans    &trans       &kp MINUS  &kp PLUS               &kp LBRC         &kp RBRC            &kp PIPE            &kp TILDE
+                                   &trans      &trans    &lt 3 TAB    &trans     &trans
             >;
         };
 
         FUN {
             bindings = <
-  &trans   &trans    &kp F1  &kp F2   &kp F3   &kp F4       &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4   &bt BT_CLR
-  &trans   &kp DEL   &kp F5  &kp F6   &kp F7   &kp F8       &out OUT_TOG  &kp K_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE     &kp LALT
-  &trans   &trans    &kp F9  &kp F10  &kp F11  &kp F12      &trans        &trans            &trans             &trans           &trans         &to 0
-                     &trans  &trans  &trans                 &trans        &trans
+&trans  &trans   &kp F1  &kp F2   &kp F3   &kp F4     &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4  &bt BT_CLR
+&trans  &kp DEL  &kp F5  &kp F6   &kp F7   &kp F8     &out OUT_TOG  &kp K_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE    &kp LALT
+&trans  &trans   &kp F9  &kp F10  &kp F11  &kp F12    &trans        &trans            &trans             &trans           &trans        &to 0
+                         &trans   &trans   &trans     &trans        &trans
             >;
         };
 
         SCROLL {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
             >;
         };
     };
