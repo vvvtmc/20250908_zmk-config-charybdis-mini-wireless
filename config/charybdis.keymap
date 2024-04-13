@@ -5,18 +5,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
-&lt {
-    tapping-term-ms = <240>;
-    flavor = "tap-preferred";
-    quick-tap-ms = <150>;
-    require-prior-idle-ms = <10>;
-};
-
-&mt {
-    tapping-term-ms = <250>;
-    flavor = "tap-preferred";
-    require-prior-idle-ms = <250>;
-};
+#define U_TAPPING_TERM 200
 
 / {
     chosen { zmk,matrix_transform = &default_transform; };
@@ -34,6 +23,11 @@
         RightClickRight {
             bindings = <&mkp RCLK>;
             key-positions = <20 21>;
+        };
+
+        MiddleClickRight {
+            bindings = <&mkp MCLK>;
+            key-positions = <21 22>;
         };
 
         ParaLeft {
@@ -78,6 +72,22 @@
     };
 
     behaviors {
+        u_mt: u_mt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "u_mt";
+            #binding-cells = <2>;
+            tapping_term_ms = <U_TAPPING_TERM>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        u_lt: u_lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "u_lt";
+            #binding-cells = <2>;
+            tapping_term_ms = <U_TAPPING_TERM>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
         Shift_Enter: Shift_Enter {
             compatible = "zmk,behavior-hold-tap";
             label = "SHIFT_ENTER";
@@ -94,27 +104,27 @@
 
         BASE {
             bindings = <
-&kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T    &kp Y  &kp U             &kp I        &kp O            &kp P               &kp BSPC
-&kp TAB    &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G    &kp H  &mt LEFT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
-&kp LSHFT  &kp Z           &kp X           &kp C        &kp V             &kp B    &kp N  &kp M             &kp COMMA    &kp DOT          &kp FSLH            &kp LGUI
-                                           &mkp LCLK    &kp SPACE         &mo 1    &mo 2  &kp RET
+&kp ESC    &kp Q             &kp W             &kp E          &kp R               &kp T    &kp Y  &kp U               &kp I          &kp O              &kp P                 &kp BSPC
+&kp TAB    &u_mt LEFT_GUI A  &u_mt LEFT_ALT S  &u_mt LCTRL D  &u_mt LEFT_SHIFT F  &kp G    &kp H  &u_mt LEFT_SHIFT J  &u_mt RCTRL K  &u_mt RIGHT_ALT L  &u_mt RIGHT_GUI SEMI  &kp APOS
+&kp LSHFT  &kp Z             &kp X             &kp C          &kp V               &kp B    &kp N  &kp M               &kp COMMA      &kp DOT            &kp FSLH              &kp LGUI
+                             &kp LGUI    &kp SPACE     &mo 1                               &mo 2  &kp RET
             >;
         };
 
         NAV {
             bindings = <
-&trans  &trans    &kp UP    &trans     &trans  &trans    &kp N7           &kp N8              &kp N9        &kp N0  &kp HOME  &kp F1
-&trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans    &kp N4           &mt RIGHT_SHIFT N5  &mt RCTRL N6  &trans  &trans    &kp F10
-&trans  &trans    &trans    &trans     &trans  &trans    &kp N1           &kp N2              &kp N3        &trans  &trans    &kp F20
-                            &trans     &trans  &trans    &lt 3 BACKSPACE  &kp LSHFT
+&trans  &trans      &kp UP    &trans       &trans  &trans        &kp N7   &kp N8                &kp N9          &kp N0  &kp HOME  &kp F1
+&trans  &kp LEFT    &kp DOWN  &kp RIGHT    &trans  &trans        &kp N4   &u_mt RIGHT_SHIFT N5  &u_mt RCTRL N6  &trans  &trans    &kp F10
+&trans  &trans      &trans    &trans       &trans  &trans        &kp N1   &kp N2                &kp N3          &trans  &trans    &kp F20
+                            &trans     &trans  &trans                     &lt 3 BACKSPACE  &kp LSHFT
             >;
         };
 
         SYMNUM {
             bindings = <
-&trans  &kp EXCL      &kp AT       &kp HASH    &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS               &kp KP_MULTIPLY  &kp LPAR            &kp RPAR            &kp DEL
-&trans  &bt BT_CLR    &bt BT_PRV   &bt BT_NXT  &trans    &trans       &kp UNDER  &mt RIGHT_SHIFT EQUAL  &mt RCTRL LBKT   &mt RIGHT_ALT RBKT  &mt RIGHT_GUI BSLH  &kp GRAVE
-&trans  &out OUT_TOG  &bootloader  &trans      &trans    &trans       &kp MINUS  &kp PLUS               &kp LBRC         &kp RBRC            &kp PIPE            &kp TILDE
+&trans  &kp EXCL      &kp AT       &kp HASH    &kp DLLR  &kp PRCNT    &kp CARET  &kp   AMPS               &kp KP_MULTIPLY    &kp LPAR              &kp RPAR              &kp DEL
+&trans  &bt BT_CLR    &bt BT_PRV   &bt BT_NXT  &trans    &trans       &kp UNDER  &u_mt RIGHT_SHIFT EQUAL  &u_mt RCTRL LBKT   &u_mt RIGHT_ALT RBKT  &u_mt RIGHT_GUI BSLH  &kp GRAVE
+&trans  &out OUT_TOG  &bootloader  &trans      &trans    &trans       &kp MINUS  &kp   PLUS               &kp LBRC           &kp RBRC              &kp PIPE              &kp TILDE
                                    &trans      &trans    &lt 3 TAB    &trans     &trans
             >;
         };
@@ -134,6 +144,15 @@
 &trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
                         &mkp LCLK  &mo 4   &mkp RCLK    &trans  &trans
+            >;
+        };
+
+        SCROLL {
+            bindings = <
+&trans  &trans  &trans  &trans   &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans   &trans  &trans       &trans  &trans
             >;
         };
     };
