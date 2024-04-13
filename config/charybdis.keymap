@@ -94,10 +94,10 @@
 
         BASE {
             bindings = <
-&kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T        &kp Y  &kp U             &kp I        &kp O            &kp P               &kp BSPC
-&kp LCTRL  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G        &kp H  &mt LEFT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
-&kp LSHFT  &kp Z           &kp X           &kp C        &kp V             &kp B        &kp N  &kp M             &kp COMMA    &kp DOT          &kp FSLH            &kp LGUI
-                                           &mo 4        &kp SPACE         &lt 1 TAB    &mo 2  &kp RET
+&kp ESC    &kp Q           &kp W           &kp E        &kp R             &kp T    &kp Y  &kp U             &kp I        &kp O            &kp P               &kp BSPC
+&kp TAB    &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G    &kp H  &mt LEFT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
+&kp LSHFT  &kp Z           &kp X           &kp C        &kp V             &kp B    &kp N  &kp M             &kp COMMA    &kp DOT          &kp FSLH            &kp LGUI
+                                           &mkp LCLK    &kp SPACE         &mo 1    &mo 2  &kp RET
             >;
         };
 
