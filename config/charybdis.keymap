@@ -143,7 +143,7 @@
 &trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp LCLK  &mo 4   &mkp RCLK    &trans  &trans
+                        &mkp LCLK  &mo 5   &mkp RCLK    &trans  &trans
             >;
         };
 
