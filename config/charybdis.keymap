@@ -24,6 +24,44 @@
         btLoader {
             bindings = <&bootloader>;
             key-positions = <1 10>;
+            timeout-ms = <30>;
+            layers = <2>;
+        };
+
+        z {
+            bindings = <&kp Z>;
+            key-positions = <21 22>;
+            layers = <0>;
+        };
+
+        alt-tab {
+            bindings = <&kp LC(LA(TAB))>;
+            key-positions = <31 32 33>;
+        };
+
+        esc {
+            bindings = <&mt LA(F4) ESCAPE>;
+            key-positions = <27 28 26>;
+        };
+
+        meh-e {
+            bindings = <&kp LS(LA(LC(E)))>;
+            key-positions = <32 31 28>;
+        };
+
+        meh-a {
+            bindings = <&kp LA(LS(LC(A)))>;
+            key-positions = <27 31 28>;
+        };
+
+        meh-h {
+            bindings = <&kp LS(LA(LC(H)))>;
+            key-positions = <43 44 45>;
+        };
+
+        alt-tab2 {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <40 39 38>;
         };
     };
 
