@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define U_TAPPING_TERM 200
 
@@ -30,38 +31,38 @@
 
         z {
             bindings = <&kp Z>;
-            key-positions = <21 22>;
+            key-positions = <9 10>;
             layers = <0>;
         };
 
         alt-tab {
             bindings = <&kp LC(LA(TAB))>;
-            key-positions = <31 32 33>;
+            key-positions = <19 20 21>;
         };
 
         esc {
             bindings = <&mt LA(F4) ESCAPE>;
-            key-positions = <27 28 26>;
+            key-positions = <16 15 14>;
         };
 
         meh-e {
             bindings = <&kp LS(LA(LC(E)))>;
-            key-positions = <32 31 28>;
+            key-positions = <16 19 20>;
         };
 
         meh-a {
             bindings = <&kp LA(LS(LC(A)))>;
-            key-positions = <27 31 28>;
+            key-positions = <15 16 19>;
         };
 
         meh-h {
             bindings = <&kp LS(LA(LC(H)))>;
-            key-positions = <43 44 45>;
+            key-positions = <43 44 45 31 33 32>;
         };
 
         alt-tab2 {
             bindings = <&kp LA(TAB)>;
-            key-positions = <40 39 38>;
+            key-positions = <28 27 26>;
         };
     };
 
