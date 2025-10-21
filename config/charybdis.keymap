@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define U_TAPPING_TERM 200
 
@@ -91,10 +92,10 @@
 
         FN {
             bindings = <
-&trans  &kp TILDE          &none              &none              &kp GRAVE          &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F11  &trans
-&trans  &kp LS(LA(LC(R)))  &kp LS(LA(LC(S)))  &kp LS(LC(LA(N)))  &kp LS(LA(LC(D)))  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F10  &trans
-&trans  &kp LEFT_WIN       &kp LEFT_ALT       &kp LSHIFT         &kp LCTRL          &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
-                                              &trans             &trans             &trans    &trans  &trans
+&trans  &kp TILDE          &none         &none              &kp GRAVE          &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F11  &trans
+&trans  &kp LS(LA(LC(R)))  &msc SCRL_UP  &kp LS(LC(LA(N)))  &kp LS(LA(LC(D)))  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F10  &trans
+&trans  &kp LEFT_WIN       &kp LEFT_ALT  &kp LSHIFT         &kp LCTRL          &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
+                                         &trans             &trans             &trans    &trans  &trans
             >;
         };
     };
