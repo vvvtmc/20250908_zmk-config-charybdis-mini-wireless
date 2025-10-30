@@ -36,7 +36,7 @@
 
         esc {
             bindings = <&mt LA(F4) ESCAPE>;
-            key-positions = <16 15 14>;
+            key-positions = <26 27 28>;
         };
 
         meh-e {
@@ -56,7 +56,7 @@
 
         alt-tab2 {
             bindings = <&kp LA(TAB)>;
-            key-positions = <28 27 26>;
+            key-positions = <14 16>;
         };
     };
 
