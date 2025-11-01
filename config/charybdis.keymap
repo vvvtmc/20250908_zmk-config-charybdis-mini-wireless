@@ -56,7 +56,7 @@
         alt-tab2 {
             bindings = <&kp LA(TAB)>;
             key-positions = <14 16>;
-            timeout-ms = <100>;
+            timeout-ms = <500>;
         };
     };
 
