@@ -31,7 +31,7 @@
 
         alt-tab {
             bindings = <&kp LC(LA(TAB))>;
-            key-positions = <19 20 21>;
+            key-positions = <14 15 16>;
         };
 
         esc {
@@ -51,12 +51,12 @@
 
         meh-h {
             bindings = <&kp LS(LA(LC(H)))>;
-            key-positions = <31 33 32>;
+            key-positions = <19 20 21>;
         };
 
         alt-tab2 {
             bindings = <&kp LA(TAB)>;
-            key-positions = <14 15 16>;
+            key-positions = <31 32 33>;
         };
 
         Fn_to_Bluetooth {
@@ -98,7 +98,7 @@
 
         FN {
             bindings = <
-&trans  &trans          &trans        &trans          &kp GRAVE        &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F11  &trans
+&trans  &trans          &trans        &kp BACKSLASH   &kp GRAVE        &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F11  &trans
 &trans  &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F10  &trans
 &trans  &kp LEFT_WIN    &kp LEFT_ALT  &kp LSHIFT      &kp LCTRL        &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
                                       &trans          &trans           &trans    &trans  &trans
