@@ -1,8 +1,9 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define U_TAPPING_TERM 200
 
@@ -79,9 +80,9 @@
 
         NAV {
             bindings = <
-&trans  &kp LC(MINUS)   &kp LC(PG_UP)  &kp LC(PAGE_DOWN)  &kp LC(EQUAL)    &trans          &trans           &none               &none            &none      &kp LA(LS(D))  &trans
-&trans  &kp LEFT_ARROW  &kp UP_ARROW   &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp C_VOL_DN    &kp C_VOLUME_UP  &kp LS(LA(LC(H)))   &kp BACKSPACE    &kp ENTER  &kp DELETE     &trans
-&trans  &kp HOME        &kp PG_UP      &kp PG_DN          &kp END          &trans          &trans           &kp RCTRL           &kp RIGHT_SHIFT  &kp RALT   &kp RGUI       &trans
+&trans  &kp LC(MINUS)   &kp LC(PG_UP)  &kp LC(PAGE_DOWN)  &kp LC(EQUAL)    &trans          &trans           &kp C_PP           &mt C_PREV C_FAST_FORWARD  &kp LC(LA(G))  &kp LA(LS(D))  &trans
+&trans  &kp LEFT_ARROW  &kp UP_ARROW   &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp C_VOL_DN    &kp C_VOLUME_UP  &kp LS(LA(LC(H)))  &kp BACKSPACE              &kp ENTER      &kp DELETE     &trans
+&trans  &kp HOME        &kp PG_UP      &kp PG_DN          &kp END          &trans          &trans           &kp RCTRL          &kp RIGHT_SHIFT            &kp RALT       &kp RGUI       &trans
                                        &trans             &kp TAB          &trans          &trans           &trans
             >;
         };
@@ -93,7 +94,7 @@
 &trans  &kp LEFT_WIN    &kp LEFT_ALT  &kp LSHIFT      &kp LCTRL        &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
                                       &trans          &trans           &trans    &trans  &trans
             >;
-        }; 
+        };
 
         Bluetooth {
             bindings = <
